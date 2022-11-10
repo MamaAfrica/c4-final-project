@@ -1,14 +1,14 @@
-import { createTodo, getAllTodosByUserId, getTodoById, updatedTodo, deleteTodoItem } from './todosAcess'
+import { createTodo, getAllTodosByUserId, getTodoById, updatedTodo, deleteTodoItem } from '../dataLayer/todosAcess'
 // import { AttachmentUtils } from './attachmentUtils';
 // import { getUploadUrl } from './attachmentUtils';
-import { TodoItem } from '../models/TodoItem'
-import { CreateTodoRequest } from '../requests/CreateTodoRequest'
-import { UpdateTodoRequest } from '../requests/UpdateTodoRequest'
+import { TodoItem } from '../../models/TodoItem'
+import { CreateTodoRequest } from '../../requests/CreateTodoRequest'
+import { UpdateTodoRequest } from '../../requests/UpdateTodoRequest'
 // import { createLogger } from '../utils/logger'
 import * as uuid from 'uuid'
 // import * as createError from 'http-errors'
 
-import { parseUserId } from '../auth/utils';
+import { parseUserId } from '../../auth/utils';
 // TODO: Implement businessLogic
 
 export async function getTodosByUserId(jwtToken: string): Promise<TodoItem[]> {

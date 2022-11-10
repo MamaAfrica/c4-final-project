@@ -3,8 +3,8 @@ import 'source-map-support/register'
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 import * as middy from 'middy'
 import { cors, httpErrorHandler } from 'middy/middlewares'
-import { getTodoById, updatedTodo } from '../../helpers/todosAcess'
-import { getUploadUrl } from '../../helpers/attachmentUtils'
+import { getTodoById, updatedTodo } from '../../helpers/dataLayer/todosAcess'
+import { getUploadUrl } from '../../helpers/dataLayer/attachmentUtils'
 //import * as AWS from 'aws-sdk';
 //const s3 = new AWS.S3();
 const bucketname = process.env.ATTACHMENT_S3_BUCKET
